@@ -4,93 +4,297 @@
     padding: 0px;
     box-sizing: border-box;
 }
-header{
-    
+
+body{
     width: 1366px;
-    height: 250px;    
-    background-image: url(/assets/design1_image2banner.jpg);
-    margin: 40px 0px 0px 0px;
+}
+header{
+    width: 1366px;
+    
+
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 130px;
 }
 h1{
-    background: black;
+    display:flex;
+    font-size: 45px;
+    justify-content: center;
     position: absolute;
-    top: -8px;
+    top: 40px;
+    margin-left: 400px;
+}
+.nav{ 
+    background-color:#000 ;
+    color:white;
     padding: 10px;
-    color: rgba(255, 217, 0, 0.925);
-    width: 1366px;
-    display: inline;
+    display: flex;
+    justify-content: flex-end;
     
-    font-size: 35px;
+        
 }
-nav{
-    width: 250px;
-    height: 300px;
-    margin: 120px 10px 10px 10px;
-    display: inline-block;
-
+.nav__li{
+        display:inline;
+        padding: 20px;
+        color:white;
+        text-decoration: none;
+        text-align: left;
+        border-left: 2px solid #ffff;
 }
 
-nav a{
-    display: block;
+.nav__li a {
+    display: inline;
+    color:white;
     text-decoration: none;
-    color:rgba(255, 217, 0, 0.925);
-    background-color:black;
-    border: 2px solid black;
-    margin: 30px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
 }
 
-
-a:hover{
-    background-color: #04a22b;
-    color:rgba(255, 217, 0, 0.925);
-    color:rgba(255, 217, 0, 0.925);
-    border-color: #0000;
+.nav__li:hover>a{
+    color:#04a22b;
 }
+
+.nav__li a{
+    color:white;
+    text-decoration: none;
+    padding: 5px;
+    height: 12px;
+}
+
 .active{
     background-color:#04a22b;
     color:#ffff;
     border-color:black;
+    }
+
+.banner{
+    width:1366px;
+    height: 250px;
+    border: 3px solid rgba(255, 217, 0, 0.925);
+    background-size: 100% 100%;
+    animation:banner 10s infinite;
+    animation-direction: alternate;
 }
-.subtitle{
-    position: absolute;
-    background: black;
-    position: relative;
-    top: 250px;
+
+@keyframes banner {
+    0%,  30%{
+        background-image: url(/assets/design1_image2banner.jpg);
+        opacity: 1;
+    }
+    31%, 34%{
+        opacity: 0.1;
+    }
+    
+    35%, 65%{
+        background-image: url(/assets/design1_image1_bannera.jpg);
+        opacity: 1;
+    }  
+    66%, 69%{
+        opacity: 0.1;
+    }
+
+    70%, 100%{
+        opacity: 1;        
+        background-image: url(/assets/design1_image2banner.jpg);
+    }        
+}
+
+main{
+    width: 1366px;
+    height: 950px;
+    
+}
+.subtitle{    
+background: #000;
 }
 
 h2{    
     text-align: center;
-    color:rgba(255, 217, 0, 0.925);
+    color:white;
     padding: 10px;
 }
 
-.subtitle .logo{
-    height: 120px;
-    display: inline-block;
-    position: absolute;
-    top: -65px;
-    right: 60px;
-}
-aside{
-    position: absolute;
-    display: inline-block;
-    margin: 120px 10px 10px 10px;
-    width: 848px;
-    height: 250px;
-}
 p{
     margin-top: 10px;
     text-align:left;
 }
 
-li{
-    padding: 30px;
-    list-style: none;
+.about{
+    display: flex;
+    margin: 80px;
+    padding: 180px 395px 240px 20px;
+    font-size: 25px;
+    text-align: justify;
+    background-image: url(/assets/hockey2.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+}
+
+dl>dt {
+    font-weight: 900;
     
 }
+
+.mes{
+    background:#FFF;
+    -moz-box-shadow: 0 0 8px #CCC;
+    -webkit-box-shadow: 0 0 2px #CCC;
+    box-shadow: 0 0 8px #CCC;
+    border:1px solid #CCC;border-collapse: collapse;
+    margin-top:60px;
+    margin-left: 50px;
+    float:left;
+    
+    
+}
+
+.months{
+    text-align:center;
+}
+.nil{
+    padding: 20px;
+    text-align: center;
+
+}
+
+.image_home{
+    display: flex;
+    width: 180px;
+    height: 340px;
+    background:#FFF;
+    -moz-box-shadow: 0 0 8px #CCC;
+    -webkit-box-shadow: 0 0 2px #CCC;
+    box-shadow: 0 0 8px rgba(255, 217, 0, 0.925);
+    border:2px solid rgba(255, 217, 0, 0.925);
+    margin-top:60px;
+    margin-left: 50px;
+    float:left;
+
+}
+.list_events{
+    width: 1000px;
+    display: flex;
+    justify-content:right;
+    font-size: 20px;
+    list-style: none;
+
+}
+
+.list_dl{
+    margin:50px;
+    text-align: justify;
+    
+}
+
+.list_ol{
+    margin: 50px;
+    text-align: justify;
+}
+
+.list_ul{
+    margin: 50px;
+    text-align: justify;
+    list-style:lower-alpha;
+    
+}
+.list_dl_1{
+    text-align:center;
+
+}
+
+.game{
+    display: flex;
+    width: 1366px;    
+    justify-content: center;
+    background-position: center;    
+    background-repeat: no-repeat;
+
+    
+}
+h3{
+    padding: 0px;
+    text-align:left;
+    font-weight: 900;
+    font-size: 20px;
+}
+.container{
+    display: flex;
+    background-image: url(/assets/hockey1.jpg);
+    margin: 50px;
+    padding: 30px 30px 30px 50px;
+}
+.table{    
+    margin: 50px;
+    padding: 0px 30px 30px 50px;
+    border-collapse: collapse; 
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+th,
+td {
+    border: 3px solid black;
+}
+th{
+    padding:10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.first{
+    justify-content: center;
+    background-color:rgba(255, 217, 0, 0.925);
+}
+
+.second{
+    justify-content:center;
+    background-color:rgba(255, 217, 0, 0.925);
+
+}
+.third{
+    background-color: rgba(255, 217, 0, 0.925);
+
+}
+.fourth{
+    background-color: rgba(255, 217, 0, 0.925);
+}
+.fifth{
+    background-color: rgba(255, 217, 0, 0.925);
+}
+
+.sixth{
+    background-color: rgba(255, 217, 0, 0.925);
+
+}
+
+.gamesp{
+    background: rgba(255, 217, 0, 0.925);
+    
+}
+.cont{
+    width: 1366px;
+    display: flex;
+    background-image: url(/assets/hockey1.jpg);
+    margin: 50px;
+    padding: 30px 30px 30px 50px;   
+}
+.contacp{
+    font-size: 30px;
+
+}
+footer{
+    width: 1366px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+
+
 
 
 
